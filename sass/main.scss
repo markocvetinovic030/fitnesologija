@@ -3,7 +3,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 header {
     background: transparent;
@@ -68,6 +68,17 @@ main {
         background-image: url(https://cottoecrudo.it/wp-content/uploads/2019/03/3-Fitness-Girl-da-seguire-su-Youtube-1300x865.png);
         background-size: cover;
 
+        a{ 
+            width: 30px;
+            display: block;
+            margin: 0 auto;
+            padding-top: 200px;
+            img{
+                width: 25px;
+                transform: rotate(270deg);
+            }
+        }
+
         .gradient {
             background: rgb(0, 191, 255);
             background: linear-gradient(180deg, rgba(0, 191, 255, 1) 0%, rgba(0, 191, 255, 0.5102415966386555) 0%);
@@ -91,58 +102,127 @@ main {
         }
     }
 
-
-    #profile {
-        background-image: url(https://www.onlygfx.com/wp-content/uploads/2018/07/7-light-blue-watercolor-splash-background-4.jpg);
-        background-size: cover;
-        padding-top: 320px;
-        padding-bottom: 150px;
+    #backgorundframe {
+        border-top: 3px solid gray;
         background-color: $lightgray;
 
         .firstcontent {
-            display: flex;
-            justify-content: space-between;
+            text-align: center;
+            padding-top: 150px;
 
-            .left {
-                width: 50%;
-
-                img {
-                    width: 200px;
-                    border-radius: 50%;
-                }
+            h2 {
+                font-weight: bold;
             }
 
-            .right {
-                text-align: center;
-                width: 50%;
+            .flexbox {
+                display: flex;
+                margin-top: 150px;
 
-                h2 {
-                    color: black;
-                    font-weight: bold;
-                    padding-bottom: 35px;
+                .left {
+                    background-image: url(https://www.pngmart.com/files/8/Blue-PNG-Image.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 50%;
+
+                    img {
+                        width: 300px;
+                        padding-top: 10px;
+                        filter: drop-shadow(5px 5px 5px #222);
+                    }
                 }
-                p{
-                    color: black;
-                    font-size: 18px;
-                    font-weight: bold;
+
+                .right {
+                    width: 50%;
+
+                    h3 {
+                        padding-bottom: 30px;
+                        font-size: 30px;
+                    }
+
+                    p {
+                        max-width: 500px;
+                        margin: 0 auto;
+                        font-size: 18px;
+                        padding-left: 30px;
+                        text-align: start;
+                    }
                 }
             }
         }
 
-        .secondcontent{
-            padding-top: 100px;
-
-            h3 {
-                color: black;
+        .sliderframe {
+            #ph{
+                font-size: 25px;
                 font-weight: bold;
-                padding-bottom: 40px;
                 text-align: center;
+                margin-top: 200px;
+                margin-bottom: 80px;
             }
-            p{
-                color: black;
-                font-size: 18px;
-                font-weight: bold;
+            .slider {
+                background-color: gray;
+                margin-bottom: 200px;
+                border-radius: 50px;
+
+                #carouselExampleIndicators {
+                    padding: 200px 5px;
+
+                    p {
+                        max-width: 700px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        .secondcontent {
+            margin-top: 200px;
+
+            .profiledescription {
+                .flexbox {
+                    display: flex;
+
+                    .left {
+                        h4 {
+                            padding-bottom: 30px;
+                            font-size: 30px;
+                            text-align: center;
+                        }
+
+                        p {
+                            max-width: 500px;
+                            margin: 0 auto;
+                            font-size: 18px;
+                            padding-left: 30px;
+                            text-align: start;
+                        }
+                    }
+
+                    .right {
+                        img {
+                            padding-left: 150px;
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+footer {
+    height: 100px;
+    border-top: 1px solid gray;
+
+    .left {
+        p {
+            color: gray;
+            font-size: 14px;
+
+            &:nth-child(1) {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {}
