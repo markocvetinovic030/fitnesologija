@@ -13,6 +13,10 @@ header {
     position: absolute;
     transition: top 0.3s;
 
+    .hamburger-menu{
+        display: none;
+    }
+
     .container {
         .flexbox {
             padding-top: 30px;
@@ -68,12 +72,13 @@ main {
         background-image: url(https://cottoecrudo.it/wp-content/uploads/2019/03/3-Fitness-Girl-da-seguire-su-Youtube-1300x865.png);
         background-size: cover;
 
-        a{ 
+        a {
             width: 30px;
             display: block;
             margin: 0 auto;
             padding-top: 200px;
-            img{
+
+            img {
                 width: 25px;
                 transform: rotate(270deg);
             }
@@ -151,17 +156,17 @@ main {
         }
 
         .sliderframe {
-            #ph{
+            #ph {
                 font-size: 25px;
                 font-weight: bold;
                 text-align: center;
                 margin-top: 200px;
                 margin-bottom: 80px;
             }
+
             .slider {
                 background-color: gray;
                 margin-bottom: 200px;
-                border-radius: 50px;
 
                 #carouselExampleIndicators {
                     padding: 200px 5px;
@@ -225,4 +230,137 @@ footer {
 }
 
 
-@media (max-width: 800px) {}
+@media (max-width: 375px) {
+
+    header {
+        
+        .flexbox{
+            #logo{
+                transform: translate(370%, -33%);
+                
+            }
+            nav{
+                display: none;
+            }
+        }
+        
+        #hamburger{
+            width: 50px;
+            transform: translateY(-50%);
+            filter: drop-shadow(2px 2px 2px #222);
+        }
+
+        .hamburger-menu{
+            display: block;
+            transform: translate(-5%, 30%);
+        }
+
+        #menu__toggle {
+            opacity: 0;
+          }
+          #menu__toggle:checked + .menu__btn > span {
+            transform: rotate(45deg);
+          }
+          #menu__toggle:checked + .menu__btn > span::before {
+            top: 0;
+            transform: rotate(0deg);
+          }
+          #menu__toggle:checked + .menu__btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+          #menu__toggle:checked ~ .menu__box {
+            left: 0 !important;
+          }
+          .menu__btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            z-index: 1;
+            margin-top: 40px;
+            margin-left: 30px;
+          }
+          .menu__btn > span,
+          .menu__btn > span::before,
+          .menu__btn > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #616161;
+            transition-duration: .25s;
+          }
+          .menu__btn > span::before {
+            content: '';
+            top: -8px;
+          }
+          .menu__btn > span::after {
+            content: '';
+            top: 8px;
+          }
+          .menu__box {
+            display: block;
+            position: fixed;
+            top: -10px;
+            left: -100%;
+            width: 250px;
+            height: 490px;
+            margin: 0;
+            padding: 80px 0;
+            list-style: none;
+            background-color: $lightgray;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+            transition-duration: .25s;
+            padding-top: 120px;
+            padding-left: 30px;
+          }
+          .menu__item {
+            display: block;
+            padding: 12px 24px;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            transition-duration: .25s;
+          }
+          .menu__item:hover {
+            background-color: #CFD8DC;
+          }
+    }
+
+    main{
+        .frame{
+            background-position: -850px;
+            .gradient{
+                h1{
+                    padding-top: 200px;
+                }
+                p{
+                    max-width: 70%;
+                    text-align: center;                    
+                }
+                a{
+                    display: none;
+                }
+            }
+        }
+
+       #backgorundframe{
+           .profile{
+               .firstcontent{
+                   .container{
+                      .flexbox{
+                          .left{
+                              width: 100%;
+                          }
+                      }
+                   }
+               }
+           }
+       }
+    }
+}
